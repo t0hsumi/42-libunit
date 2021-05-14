@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   launch_tests.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 20:55:52 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 02:57:06 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 03:02:23 by dainoue          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,15 +60,13 @@ int	launch_tests(t_unit_test **list)
 			ft_listclear(list);
 		}
 		else if (pid == 0)
-			c_process(&tmp);
+			c_process(list);
 		else if (pid > 0)
-			p_process(&tmp, &success_cases);
+			p_process(list, &success_cases);
 		*list = (*list)->next;
 		test_cases++;
 	}
 	printf("%d / %d tests checked\n", success_cases, test_cases);
 	ft_listclear(list);
-	if (success_cases == test_cases)
-		return (0);
-	return (-1);
+	return ((success_cases == test_cases) * (-1));
 }
