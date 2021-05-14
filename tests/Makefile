@@ -6,7 +6,7 @@
 #    By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/15 01:34:20 by tohsumi           #+#    #+#              #
-#    Updated: 2021/05/15 03:10:54 by tohsumi          ###   ########.fr        #
+#    Updated: 2021/05/15 03:28:57 by tohsumi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = run_test
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I $(PATH_FRAMEWORK)
 
-SRCS = main.c wrong_strcpy.c $(oildcard */*.c)
+SRCS = main.c wrong_strcpy.c $(wildcard */*.c)
 OBJS = $(SRCS:.c=.o)
 
 UNIT_A = ../framework/libunit.a

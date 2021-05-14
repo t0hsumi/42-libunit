@@ -6,15 +6,15 @@
 /*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 22:22:21 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 02:36:04 by dainoue          ###   ########.fr       */
+/*   Updated: 2021/05/15 03:26:28 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "tests.h"
+#include "ftests.h"
 
 int	main(void)
 {
-	if (strchr_launcher())
+	if (strcpy_launcher())
 		return (-1);
 	else
 		return (0);
