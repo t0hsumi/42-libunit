@@ -6,7 +6,7 @@
 /*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 09:42:18 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 03:36:26 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 03:41:03 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 
 int	strcpy_ko_test(void)
 {
-	if (strcmp(strcpy_ko("abcde", "fgh"), strcpy("abcde", "fgh")))
+	if (strcpy_ko("abcde", "fgh") != strcpy("abcde", "fgh"))
 		return (-1);
 	else
 		return (0);
