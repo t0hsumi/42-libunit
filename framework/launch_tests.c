@@ -6,7 +6,7 @@
 /*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 20:55:52 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 03:02:23 by dainoue          ###   ########.fr       */
+/*   Updated: 2021/05/15 04:11:48 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,11 +28,11 @@ static void	p_process(t_unit_test **list, int *success)
 	{
 		if (WEXITSTATUS(status) == 0)
 		{
-			printf("[OK]\n");
+			printf("\x1b[42m[OK]\x1b[m\n");
 			*success = *success + 1;
 		}
 		else
-			printf("[KO]\n");
+			printf("\x1b[41m[KO]\x1b[m\n");
 	}
 	else if (WIFSIGNALED(status))
 	{
