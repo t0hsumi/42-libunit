@@ -6,7 +6,7 @@
 /*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 09:42:18 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 03:41:45 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 03:54:23 by dainoue          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,10 @@
 
 int	strcpy_bus_test(void)
 {
-	if (strcpy_bus("abcde", "fgh") != strcpy("abcde", "fgh"))
+	char	d[3];
+	char	s[3];
+
+	if (strcpy_bus(d, s) != strcpy(d, s))
 		return (-1);
 	else
 		return (0);
