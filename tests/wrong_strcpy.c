@@ -6,7 +6,7 @@
 /*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/15 02:21:53 by dainoue           #+#    #+#             */
-/*   Updated: 2021/05/15 02:47:38 by dainoue          ###   ########.fr       */
+/*   Updated: 2021/05/15 04:08:16 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*strcpy_ok(char *dest, const char *src)
 	i = 0;
 	if (dest && src)
 	{
-		while (src)
+		while (src[i])
 		{
 			dest[i] = src[i];
 			i++;
