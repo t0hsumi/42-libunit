@@ -6,7 +6,7 @@
 #    By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 21:39:05 by tohsumi           #+#    #+#              #
-#    Updated: 2021/05/15 01:42:17 by dainoue          ###   ########.fr        #
+#    Updated: 2021/05/15 02:05:12 by tohsumi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@ NAME = run_test
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I $(PATH_LIBFT) -I $(PATH_FRAMEWORK)
 
-SRCS = ./main.c ./atoi/00_launcher.c ./atoi/01_basic_test1.c ./atoi/02_basic_test2.c ./atoi/03_null_test.c
+SRCS = ./main.c $(wildcard */*.c)
 OBJS = $(SRCS:.c=.o)
 
 LIBFT_A = ../libft/libft.a

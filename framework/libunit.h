@@ -6,7 +6,7 @@
 /*   By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 21:02:12 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/14 23:33:33 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 02:50:43 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,12 +19,12 @@
 # include <signal.h>
 # include <sys/wait.h>
 
-typedef struct		s_unit_test
+typedef struct s_unit_test
 {
 	char				*name;
 	int					(*test_func)(void);
 	struct s_unit_test	*next;
-}					t_unit_test;
+}				t_unit_test;
 
 void	load_test(t_unit_test **test_list, char *name, int (*test)(void));
 int		launch_tests(t_unit_test **list);

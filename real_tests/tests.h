@@ -6,7 +6,7 @@
 /*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 21:05:51 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 01:54:53 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 02:33:34 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <unistd.h>
 # include <stdio.h>
 # include <signal.h>
+# include <string.h>
 # include "libft.h"
 # include "libunit.h"
 
@@ -66,4 +67,6 @@ int	strncmp_launcher(void);
 int	strncmp_basic(void);
 int	strnstr_launcher(void);
 int	strnstr_basic(void);
+int	memcmp_basic(void);
+int	memcmp_launcher(void);
 #endif

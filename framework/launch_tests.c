@@ -6,7 +6,7 @@
 /*   By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/11 20:55:52 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/14 22:28:21 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 02:57:06 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,27 +37,21 @@ static void	p_process(t_unit_test **list, int *success)
 	else if (WIFSIGNALED(status))
 	{
 		if (WTERMSIG(status) == SIGSEGV)
-		{
 			printf("[SEGV]\n");
-		}
 		else if (WTERMSIG(status) == SIGBUS)
-		{
 			printf("[BUSE]\n");
-		}
 	}
 }
 
 int	launch_tests(t_unit_test **list)
 {
-	int		test_cases;
-	int		success_cases;
-	pid_t	pid;
-	t_unit_test	*tmp;
+	int			test_cases;
+	int			success_cases;
+	pid_t		pid;
 
 	test_cases = 0;
 	success_cases = 0;
-	tmp = *list;
-	while (tmp)
+	while (*list)
 	{
 		pid = fork();
 		if (pid < 0)
@@ -69,7 +63,7 @@ int	launch_tests(t_unit_test **list)
 			c_process(&tmp);
 		else if (pid > 0)
 			p_process(&tmp, &success_cases);
-		tmp = tmp->next;
+		*list = (*list)->next;
 		test_cases++;
 	}
 	printf("%d / %d tests checked\n", success_cases, test_cases);

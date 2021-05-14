@@ -1,23 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   00_launcher.c                                      :+:      :+:    :+:   */
+/*   01_basic_test.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
+/*   By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/13 22:07:59 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/14 23:22:06 by dainoue          ###   ########.fr       */
+/*   Created: 2021/05/15 02:23:16 by tohsumi           #+#    #+#             */
+/*   Updated: 2021/05/15 02:43:05 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../tests.h"
 
-int	isascii_launcher(void)
+int	memcmp_basic(void)
 {
-	t_unit_test	*testlist;
-
-	testlist = NULL;
-	puts("ISASCII:");
-	load_test(&testlist, "Basic test", &isascii_basic);
-	return (launch_tests(&testlist));
+	if (ft_memcmp("memcmp\0\0\0", "memcmp\0aaa", 6)
+		== memcmp("memcmp\0\0\0", "memcmp\0aaa", 6))
+		return (0);
+	else
+		return (-1);
 }

@@ -6,17 +6,18 @@
 /*   By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/10 22:33:55 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/14 22:25:33 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 02:51:49 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libunit.h"
 
-static t_unit_test	*new_test_list(char *name, int (*test)(void), t_unit_test **list)
+static t_unit_test	*new_test_list(char *name, int (*test)(void),
+		t_unit_test **list)
 {
 	t_unit_test	*test_list;
 
-	test_list = (t_unit_test*)malloc(sizeof(t_unit_test));
+	test_list = (t_unit_test *)malloc(sizeof(t_unit_test));
 	if (!test_list)
 		ft_listclear(list);
 	test_list->name = name;

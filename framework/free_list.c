@@ -6,7 +6,7 @@
 /*   By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/14 22:18:08 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 01:14:54 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 02:49:04 by tohsumi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_listclear(t_unit_test **lst)
 {
-	t_unit_test *tmp;
+	t_unit_test	*tmp;
 
 	if (!lst)
 		return ;
