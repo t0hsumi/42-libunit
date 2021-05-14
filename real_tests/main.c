@@ -6,7 +6,7 @@
 /*   By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/13 22:22:21 by tohsumi           #+#    #+#             */
-/*   Updated: 2021/05/15 03:20:20 by tohsumi          ###   ########.fr       */
+/*   Updated: 2021/05/15 03:57:00 by dainoue          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 int	main(void)
 {
+	printf("*********************************\n");
+	printf("** 42 - Unit Tests ****\n");
+	printf("*********************************\n");
 	atoi_launcher();
 	isalnum_launcher();
 	isalnum_launcher();
