@@ -6,7 +6,7 @@
 #    By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/14 21:39:05 by tohsumi           #+#    #+#              #
-#    Updated: 2021/05/15 03:14:02 by tohsumi          ###   ########.fr        #
+#    Updated: 2021/05/15 08:54:24 by tohsumi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -37,7 +37,7 @@ $(LIBFT_A):
 $(NAME): $(OBJS) $(UNIT_A) $(LIBFT_A)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(UNIT_A) $(LIBFT_A)
 
-test: re
+test: $(NAME)
 	exec ./$(NAME)
 
 clean:

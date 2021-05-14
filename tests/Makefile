@@ -6,7 +6,7 @@
 #    By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/05/15 01:34:20 by tohsumi           #+#    #+#              #
-#    Updated: 2021/05/15 03:28:57 by tohsumi          ###   ########.fr        #
+#    Updated: 2021/05/15 08:55:52 by tohsumi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,7 +33,7 @@ $(UNIT_A):
 $(NAME): $(OBJS) $(UNIT_A)
 	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(UNIT_A)
 
-test: re
+test: $(NAME)
 	./$(NAME)
 
 clean:
