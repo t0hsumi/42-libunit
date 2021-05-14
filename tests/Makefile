@@ -3,25 +3,24 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: dainoue <dainoue@student.42tokyo.jp>       +#+  +:+       +#+         #
+#    By: tohsumi <tohsumi@student.42tokyo.jp>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/05/14 21:39:05 by tohsumi           #+#    #+#              #
-#    Updated: 2021/05/15 03:14:02 by tohsumi          ###   ########.fr        #
+#    Created: 2021/05/15 01:34:20 by tohsumi           #+#    #+#              #
+#    Updated: 2021/05/15 03:10:54 by tohsumi          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = run_test
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -I $(PATH_LIBFT) -I $(PATH_FRAMEWORK)
+CFLAGS = -Wall -Wextra -Werror -I $(PATH_FRAMEWORK)
 
-SRCS = ./main.c $(wildcard */*.c)
+SRCS = main.c wrong_strcpy.c $(oildcard */*.c)
 OBJS = $(SRCS:.c=.o)
 
-LIBFT_A = ../libft/libft.a
 UNIT_A = ../framework/libunit.a
 PATH_FRAMEWORK = ../framework
-PATH_LIBFT = ../libft
+UNIT_A = ../framework/libunit.a
 
 all: $(NAME)
 
@@ -31,23 +30,18 @@ all: $(NAME)
 $(UNIT_A):
 	make -C $(PATH_FRAMEWORK)
 
-$(LIBFT_A):
-	make -C $(PATH_LIBFT)
-
-$(NAME): $(OBJS) $(UNIT_A) $(LIBFT_A)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(UNIT_A) $(LIBFT_A)
+$(NAME): $(OBJS) $(UNIT_A)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(UNIT_A)
 
 test: re
-	exec ./$(NAME)
+	./$(NAME)
 
 clean:
 	make -C $(PATH_FRAMEWORK) clean
-	make -C $(PATH_LIBFT) clean
 	rm -f $(OBJS)
 
 fclean: clean
 	make -C $(PATH_FRAMEWORK) fclean
-	make -C $(PATH_LIBFT) fclean
 	rm -f $(NAME)
 
 re: fclean all
